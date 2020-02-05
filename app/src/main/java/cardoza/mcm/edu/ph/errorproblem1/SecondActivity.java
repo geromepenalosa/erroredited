@@ -8,7 +8,7 @@ import android.widget.TextView; //gi import nato para naa tay display
 
 public class SecondActivity extends AppCompatActivity {
 
-    String txtTxt="";
+    String txtTxt;
 
     TextView tbt;
     @Override
@@ -17,9 +17,9 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.secondactivity);
 
 
-        Intent qwerty = getIntent();
 
-        txtTxt = qwerty.getStringExtra("TXT");
+
+        txtTxt = getIntent().getStringExtra("TXT");
 
         tbt = findViewById(R.id.textView);
 
