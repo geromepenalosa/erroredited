@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:entries="@array/planets_array"/>
+        android:entries="@array/planet_array"/>
 
     <Button
         android:id="@+id/button"

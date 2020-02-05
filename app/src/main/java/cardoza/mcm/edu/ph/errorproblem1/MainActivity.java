@@ -8,11 +8,15 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.Spinner;
-
+import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     Spinner spinner;
+    TextView txtFromTxtbox;
     Button button = findViewById(R.id.button);
+    String txtfromspinner;
+
+
 
 
     @Override
@@ -20,13 +24,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final String txtfromspinner;
 
         spinner.setOnItemSelectedListener(
                 new AdapterView.OnItemSelectedListener() {
                     @Override
                     public  void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                        txtfromspinner = spinner.getSelectedItem().toString;
+                        txtfromspinner = spinner.getSelectedItem().toString();
                     }
 
                     public void onNothingSelected(AdapterView<?> parent){
@@ -39,13 +42,9 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
 
-                        txtFromTxtbox = String.valueOf(txtbox.getText());
-
-                        number = Integer.parseInt(String.valueOf(numbox.getText()));
-
                         Intent i  = new Intent(MainActivity.this, SecondActivity.class);
 
-                        i.putExtra("TXT",txtFromspinner);
+                        i.putExtra("TXT",txtfromspinner);
 
                         startActivity(i);
 
