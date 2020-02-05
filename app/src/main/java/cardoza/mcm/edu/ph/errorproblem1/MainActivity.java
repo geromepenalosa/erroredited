@@ -23,10 +23,14 @@ public class MainActivity extends AppCompatActivity {
         final String txtfromspinner;
 
         spinner.setOnItemSelectedListener(
-                new AdapterView.OnItemSelectedListener(AdapterView<?> parent, ) {
+                new AdapterView.OnItemSelectedListener() {
                     @Override
-                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    public  void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                         txtfromspinner = spinner.getSelectedItem().toString;
+                    }
+
+                    public void onNothingSelected(AdapterView<?> parent){
+
                     }
                 }
         );
